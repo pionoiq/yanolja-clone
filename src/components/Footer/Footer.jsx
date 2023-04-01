@@ -19,7 +19,7 @@ const Footer = () => {
     <footer className="footer">
       <section className="footer__section">
         <div className="footer__logo">
-          <img src="{Logo}" alt="yanolja_logo" />
+          {/*<img src="{Logo}" alt="yanolja_logo" />*/}
         </div>
         <address className="footer__address">
           <div className="footer__adrTodiv">Y-Siren (윤리경영/제보)</div>
