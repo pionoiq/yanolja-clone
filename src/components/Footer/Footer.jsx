@@ -1,7 +1,6 @@
 import React from 'react';
 import './Footer.scss';
 import { useState } from 'react';
-// import { Logo } from '../../svg/footer_img/logo_b2.svg';
 
 const Footer = () => {
   let [familySiteName, b] = useState([
@@ -23,7 +22,7 @@ const Footer = () => {
     <footer className="footer">
       <section className="footer__section">
         <div className="footer__logo">
-          <img src="{Logo}" alt="yanolja_logo" />
+          <img src="" alt="yanolja_logo" />
         </div>
         <address className="footer__address">
           <ul>
@@ -46,28 +45,29 @@ const Footer = () => {
               <span>×</span>
             </div>
             <div className="footer__btnBox--covered"></div>
-            {/* <div className="footer__btnBox"></div> */}
-            <div className="footer__siteListCont">
-              <ul>
-                <li>
-                  <a href="#">{familySiteName[0]}</a>
-                </li>
-                <li>
-                  <a href="#">{familySiteName[1]}</a>
-                </li>
-                <li>
-                  <a href="#">{familySiteName[2]}</a>
-                </li>
-                <li>
-                  <a href="#">{familySiteName[3]}</a>
-                </li>
-                <li>
-                  <a href="#">{familySiteName[4]}</a>
-                </li>
-                <li>
-                  <a href="#">{familySiteName[5]}</a>
-                </li>
-              </ul>
+            <div className="footer__siteListBox">
+              <div className="footer__siteListCont">
+                <ul>
+                  <li>
+                    <a href="#">{familySiteName[0]}</a>
+                  </li>
+                  <li>
+                    <a href="#">{familySiteName[1]}</a>
+                  </li>
+                  <li>
+                    <a href="#">{familySiteName[2]}</a>
+                  </li>
+                  <li>
+                    <a href="#">{familySiteName[3]}</a>
+                  </li>
+                  <li>
+                    <a href="#">{familySiteName[4]}</a>
+                  </li>
+                  <li>
+                    <a href="#">{familySiteName[5]}</a>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
           <div className="footer__followUs">
@@ -75,25 +75,41 @@ const Footer = () => {
             <div className="footer__snsImg">
               <ul>
                 <li>
-                  <img src="" alt="Linkedin" />
+                  <a href="#">
+                    <img src="" alt="Linkedin" />
+                  </a>
                 </li>
                 <li>
-                  <img src="" alt="Facebook" />
+                  <a href="#">
+                    <img src="" alt="Facebook" />
+                  </a>
                 </li>
                 <li>
-                  <img src="" alt="Instargram" />
+                  <a href="#">
+                    <img src="" alt="Instar" />
+                  </a>
                 </li>
                 <li>
-                  <img src="" alt="naver" />
+                  <a href="#">
+                    <img src="" alt="npost" />
+                  </a>
                 </li>
                 <li>
-                  <img src="" alt="youtub" />
+                  <a href="#">
+                    <img src="" alt="youtube" />
+                  </a>
+                </li>
+              </ul>
+              <ul>
+                <li>
+                  <a href="#">
+                    <img src="" alt="소비자중심공정거래위원회" />
+                  </a>
                 </li>
                 <li>
-                  <img src="" alt="소비자중심공정거래위원회" />
-                </li>
-                <li>
-                  <img src="" alt="Design Award 2022" />
+                  <a href="#">
+                    <img src="" alt="Design Award 2022" />
+                  </a>
                 </li>
               </ul>
             </div>
