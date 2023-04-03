@@ -42,9 +42,10 @@ const Footer = () => {
           <div className="footer__familySite">
             <div className="footer__familySiteTitle">
               <span>Famliy site</span>
-              <span>×</span>
+              <span className="fadein">+</span>
             </div>
-            <div className="footer__btnBox--covered"></div>
+            {/* <div className="footer__btnBox"></div> */}
+            {/* <div className="footer__btnBox--covered"></div> */}
             <div className="footer__siteListBox">
               <div className="footer__siteListCont">
                 <ul>
