@@ -1,6 +1,15 @@
-.btn-scroll-top {
-  width: 20px;
-  height: 20px;
+.scroll-top-btn {
+  position: absolute;
+  right: 112px;
+  bottom: 100px;
+  width: 2.5vw;
+  height: 2.5vw;
+  border: 2px solid $color_black;
+  border-radius: 100%;
+  svg {
+    width: 50%;
+    height: 50%;
+  }
 }
 
 section {
