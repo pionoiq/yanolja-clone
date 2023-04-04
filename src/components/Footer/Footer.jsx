@@ -1,6 +1,9 @@
 import React from 'react';
 import './Footer.scss';
 import { useState } from 'react';
+import { ReactComponent as Logo_b2 } from '../../assets/svg/logo_b2.svg';
+import Plus from '../../assets/svg/plus.svg';
+// import Plus_w from '../../assets/svg/plus_w.svg';
 
 const Footer = () => {
   let [familySiteName, b] = useState([
@@ -22,13 +25,13 @@ const Footer = () => {
     <footer className="footer">
       <section className="footer__section">
         <div className="footer__logo">
-          <img src="" alt="yanolja_logo" />
+          <Logo_b2 width="12.08333vw"></Logo_b2>
         </div>
         <address className="footer__address">
           <ul>
             <li className="footer__adrTodiv">Y-Siren (윤리경영/제보)</li>
             <li className="footer__adrMid">
-              <p className="footer__tel">TEL1644-1346</p>
+              <p className="footer__tel">TEL 1644-1346</p>
               <p className="footer__fax">FAX 02-558-4336</p>
               <p className="footer__email">contact@yanolja.com</p>
             </li>
@@ -42,10 +45,11 @@ const Footer = () => {
           <div className="footer__familySite">
             <div className="footer__familySiteTitle">
               <span>Famliy site</span>
-              <span className="fadein">+</span>
+              <span>
+                <i className="footer__plus"></i>
+                <i className="footer__plus--changed"></i>
+              </span>
             </div>
-            {/* <div className="footer__btnBox"></div> */}
-            {/* <div className="footer__btnBox--covered"></div> */}
             <div className="footer__siteListBox">
               <div className="footer__siteListCont">
                 <ul>
