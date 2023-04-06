@@ -1,9 +1,18 @@
 import React from 'react';
 import './Footer.scss';
 import { useState } from 'react';
+import { ReactComponent as Logo_b2 } from '../../assets/svg/FooterImg/logo_b2.svg';
+// import { footerSvgList } from '../../assets/svg/FooterSvg';
 
 const Footer = () => {
-  let [familySiteName, b] = useState([
+  /*Family site toggle*/
+  const [isOpen, setList] = useState(false);
+  const toggleList = () => {
+    setList((isOpen) => !isOpen);
+  };
+
+  /*Family site lsit Name */
+  let [familySiteName] = useState([
     '야놀자',
     '야놀자 비즈니스',
     '이지테크노시스',
@@ -12,23 +21,17 @@ const Footer = () => {
     '데일리호텔',
   ]);
 
-  const [isOpen, setMenu] = useState(false); // 메뉴의 초기값을 false로 설정
-
-  const toggleMenu = () => {
-    setMenu((isOpen) => !isOpen); // on,off 개념 boolean
-  };
-
   return (
     <footer className="footer">
       <section className="footer__section">
         <div className="footer__logo">
-          <img src="" alt="yanolja_logo" />
+          <Logo_b2 width="12.08333vw"></Logo_b2>
         </div>
         <address className="footer__address">
           <ul>
             <li className="footer__adrTodiv">Y-Siren (윤리경영/제보)</li>
             <li className="footer__adrMid">
-              <p className="footer__tel">TEL1644-1346</p>
+              <p className="footer__tel">TEL 1644-1346</p>
               <p className="footer__fax">FAX 02-558-4336</p>
               <p className="footer__email">contact@yanolja.com</p>
             </li>
@@ -40,13 +43,14 @@ const Footer = () => {
         </address>
         <div className="footer__addInfo">
           <div className="footer__familySite">
-            <div className="footer__familySiteTitle">
+            <div className="footer__familySiteTitle" onClick={() => toggleList()}>
               <span>Famliy site</span>
-              <span className="fadein">+</span>
+              <span>
+                <i className="footer__plus"></i>
+                <i className="footer__plus--changed"></i>
+              </span>
             </div>
-            {/* <div className="footer__btnBox"></div> */}
-            {/* <div className="footer__btnBox--covered"></div> */}
-            <div className="footer__siteListBox">
+            <div className={isOpen ? 'footer__siteListBox' : 'footer__siteListBox--show'}>
               <div className="footer__siteListCont">
                 <ul>
                   <li>
