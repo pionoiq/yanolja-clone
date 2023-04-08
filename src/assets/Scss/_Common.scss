@@ -2,6 +2,8 @@ html,
 body {
   margin: 0;
   padding: 0;
+  scroll-behavior: smooth;
+  -webkit-scroll-behavior: smooth;
 }
 
 *,
@@ -20,9 +22,11 @@ span,
 p,
 div {
   font-family: 'Noto Sans KR', sans-serif;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased; // font smooth
 }
 
-.btn {
+button {
   border: none;
   background-color: transparent;
   cursor: pointer;
