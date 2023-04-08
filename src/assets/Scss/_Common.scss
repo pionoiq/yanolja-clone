@@ -26,6 +26,11 @@ div {
   -webkit-font-smoothing: antialiased; // font smooth
 }
 
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
 button {
   border: none;
   background-color: transparent;

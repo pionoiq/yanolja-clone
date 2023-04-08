@@ -14,7 +14,7 @@ const ScrollTopButton = () => {
   }, []);
 
   const onScrollTop = () => {
-    let between = 7; // 이동 간격 시간
+    let between = 10; // 이동 간격 시간
     let scroll = window.setInterval(function () {
       let pos = window.pageYOffset;
       let step = 20; // 이동 크기 픽셀
