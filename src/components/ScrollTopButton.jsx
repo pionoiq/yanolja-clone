@@ -14,16 +14,20 @@ const ScrollTopButton = () => {
   }, []);
 
   const onScrollTop = () => {
-    let between = 10; // 이동 간격 시간
-    let scroll = window.setInterval(function () {
-      let pos = window.pageYOffset;
-      let step = 20; // 이동 크기 픽셀
-      if (pos > 0) {
-        window.scrollTo(0, pos - step);
-      } else {
-        window.clearInterval(scroll);
-      }
-    }, between);
+    // let between = 2; // 이동 간격 시간
+    // let scroll = window.setInterval(function () {
+    //   let pos = window.pageYOffset;
+    //   let step = 20; // 이동 크기 픽셀
+    //   if (pos > 0) {
+    //     window.scrollTo(0, pos - step);
+    //   } else {
+    //     window.clearInterval(scroll);
+    //   }
+    // }, between); 상단 시간차 이동 보류
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
   };
 
   return (
