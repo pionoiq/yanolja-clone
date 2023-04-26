@@ -1,18 +1,34 @@
 import React from 'react';
-import './Footer.scss';
+import '../../assets/scss/_Footer.scss';
 import { useState } from 'react';
-import { ReactComponent as Logo_b2 } from '../../assets/svg/FooterImg/logo_b2.svg';
-// import { footerSvgList } from '../../assets/svg/FooterSvg';
+import { ReactComponent as DesignA } from '../../assets/svg/FooterImg/if_design_award_2022.svg';
+import { ReactComponent as Ccm } from '../../assets/svg/FooterImg/ccm.svg';
+import {
+  logo_b2,
+  plus,
+  plus_w,
+  facebook,
+  insta,
+  linkedin,
+  npost,
+  youtube,
+  ccm,
+  designAward,
+} from '../../assets/svg/FooterSvg';
 
 const Footer = () => {
-  /*Family site toggle*/
+  // plus button rotate
+  const [isRotate, setRotate] = useState(false);
+  const onRotate = () => {
+    setRotate(!isRotate);
+  };
+  // Family site toggle
   const [isOpen, setList] = useState(false);
   const toggleList = () => {
-    setList((isOpen) => !isOpen);
+    setList(!isOpen);
   };
-
-  /*Family site lsit Name */
-  let [familySiteName] = useState([
+  // Family site lsit Name
+  let [familySiteName, a] = useState([
     '야놀자',
     '야놀자 비즈니스',
     '이지테크노시스',
@@ -24,9 +40,7 @@ const Footer = () => {
   return (
     <footer className="footer">
       <section className="footer__section">
-        <div className="footer__logo">
-          <Logo_b2 width="12.08333vw"></Logo_b2>
-        </div>
+        <div className="footer__logo">{logo_b2}</div>
         <address className="footer__address">
           <ul>
             <li className="footer__adrTodiv">Y-Siren (윤리경영/제보)</li>
@@ -43,12 +57,15 @@ const Footer = () => {
         </address>
         <div className="footer__addInfo">
           <div className="footer__familySite">
-            <div className="footer__familySiteTitle" onClick={() => toggleList()}>
+            <div
+              className="footer__familySiteBtn"
+              onClick={() => {
+                toggleList();
+                onRotate();
+              }}
+            >
               <span>Famliy site</span>
-              <span>
-                <i className="footer__plus"></i>
-                <i className="footer__plus--changed"></i>
-              </span>
+              <span className={`plusBtn ${isRotate ? 'rotate' : ''}`}></span>
             </div>
             <div className={isOpen ? 'footer__siteListBox' : 'footer__siteListBox--show'}>
               <div className="footer__siteListCont">
@@ -78,44 +95,26 @@ const Footer = () => {
           <div className="footer__followUs">
             <div className="footer__followUsTitle">Follow Us</div>
             <div className="footer__snsImg">
-              <ul>
+              <ul className="footer__snsUl1">
                 <li>
-                  <a href="#">
-                    <img src="" alt="Linkedin" />
-                  </a>
+                  <a href="#">{linkedin}</a>
                 </li>
                 <li>
-                  <a href="#">
-                    <img src="" alt="Facebook" />
-                  </a>
+                  <a href="#">{facebook}</a>
                 </li>
                 <li>
-                  <a href="#">
-                    <img src="" alt="Instar" />
-                  </a>
+                  <a href="#">{insta}</a>
                 </li>
                 <li>
-                  <a href="#">
-                    <img src="" alt="npost" />
-                  </a>
+                  <a href="#">{npost}</a>
                 </li>
                 <li>
-                  <a href="#">
-                    <img src="" alt="youtube" />
-                  </a>
+                  <a href="#">{youtube}</a>
                 </li>
               </ul>
-              <ul>
-                <li>
-                  <a href="#">
-                    <img src="" alt="소비자중심공정거래위원회" />
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <img src="" alt="Design Award 2022" />
-                  </a>
-                </li>
+              <ul className="footer__snsUl2">
+                <li>{ccm}</li>
+                <li>{designAward}</li>
               </ul>
             </div>
           </div>
