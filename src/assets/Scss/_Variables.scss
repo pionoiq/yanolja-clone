@@ -1,6 +1,8 @@
 // color
 $color_white: #fff;
+$color_black: #000;
 $color_primary: #ff3478;
+$color_a: #898989;
 
 // breakpoints
 $xs: 0;
@@ -8,3 +10,10 @@ $sm: 360px;
 $md: 768px;
 $ms: 1024px;
 $lg: 1400px;
+
+// font-size
+$font-nomal-size: 0.72917vw;
+$font-large-size: 1.04167vw;
+
+// height
+$button-height: 4.2vw;

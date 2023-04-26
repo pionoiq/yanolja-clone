@@ -1,4 +1,37 @@
-.btn {
+html,
+body {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  -webkit-scroll-behavior: smooth;
+}
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span,
+p,
+div {
+  font-family: 'Noto Sans KR', sans-serif;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased; // font smooth
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
   border: none;
   background-color: transparent;
   cursor: pointer;
