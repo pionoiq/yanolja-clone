@@ -1,8 +1,7 @@
 import React from 'react';
 import '../../assets/scss/_Footer.scss';
+import Dropdown from './Dropdown';
 import { useState } from 'react';
-import { ReactComponent as DesignA } from '../../assets/svg/FooterImg/if_design_award_2022.svg';
-import { ReactComponent as Ccm } from '../../assets/svg/FooterImg/ccm.svg';
 import {
   logo_b2,
   plus,
@@ -22,13 +21,14 @@ const Footer = () => {
   const onRotate = () => {
     setRotate(!isRotate);
   };
-  // Family site toggle
-  const [isOpen, setList] = useState(false);
-  const toggleList = () => {
-    setList(!isOpen);
+  // Family site dorpdown
+  const [isOpen, setOpen] = useState(false);
+  const onDorpDown = () => {
+    setOpen(!isOpen);
   };
+
   // Family site lsit Name
-  let [familySiteName, a] = useState([
+  let [familySiteName] = useState([
     '야놀자',
     '야놀자 비즈니스',
     '이지테크노시스',
@@ -60,37 +60,38 @@ const Footer = () => {
             <div
               className="footer__familySiteBtn"
               onClick={() => {
-                toggleList();
+                onDorpDown();
                 onRotate();
               }}
             >
               <span>Famliy site</span>
-              <span className={`plusBtn ${isRotate ? 'rotate' : ''}`}></span>
+              <span className={`pCon ${isRotate ? 'rotate' : ''}`}>
+                <i className="plusBtn"></i>
+                <i className="plusBtn_w"></i>
+              </span>
             </div>
-            <div className={isOpen ? 'footer__siteListBox' : 'footer__siteListBox--show'}>
-              <div className="footer__siteListCont">
-                <ul>
-                  <li>
-                    <a href="#">{familySiteName[0]}</a>
-                  </li>
-                  <li>
-                    <a href="#">{familySiteName[1]}</a>
-                  </li>
-                  <li>
-                    <a href="#">{familySiteName[2]}</a>
-                  </li>
-                  <li>
-                    <a href="#">{familySiteName[3]}</a>
-                  </li>
-                  <li>
-                    <a href="#">{familySiteName[4]}</a>
-                  </li>
-                  <li>
-                    <a href="#">{familySiteName[5]}</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
+            <Dropdown visibility={isOpen}>
+              <ul>
+                <li>
+                  <a href="#">{familySiteName[0]}</a>
+                </li>
+                <li>
+                  <a href="#">{familySiteName[1]}</a>
+                </li>
+                <li>
+                  <a href="#">{familySiteName[2]}</a>
+                </li>
+                <li>
+                  <a href="#">{familySiteName[3]}</a>
+                </li>
+                <li>
+                  <a href="#">{familySiteName[4]}</a>
+                </li>
+                <li>
+                  <a href="#">{familySiteName[5]}</a>
+                </li>
+              </ul>
+            </Dropdown>
           </div>
           <div className="footer__followUs">
             <div className="footer__followUsTitle">Follow Us</div>

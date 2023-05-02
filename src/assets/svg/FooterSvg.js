@@ -183,7 +183,6 @@ export const ccm = (
     y="0"
     viewBox="0 0 283.46 198.21"
     // width="4.73vw"
-    width="current"
   >
     <style type="text/css">{`.st0{fill:#727D83;}`}</style>
     <g>
@@ -328,8 +327,7 @@ export const designAward = (
     data-name="Ebene 1"
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 276.72 141.73"
-    width="6.42vw"
-    // width="current"
+    // width="6.42vw"
   >
     <defs>
       <style>{`.cls-1,.cls-3{fill:#fff;}.cls-2{fill:#ec1d26;}.cls-3{font-size:27px;font-family:FrutigerNeueLTPro-Bold, Frutiger Neue LT Pro;font-weight:700;}.cls-4{letter-spacing:-0.01em;}.cls-5{letter-spacing:-0.02em;}.cls-6{letter-spacing:-0.02em;}`}</style>

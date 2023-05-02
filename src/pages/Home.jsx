@@ -57,7 +57,7 @@ const Home = () => {
         </section>
         <section className="sec-02" />
       </main>
-      <ScrollTopButton />
+      {/* <ScrollTopButton /> */}
       <Footer></Footer>
     </>
   );
